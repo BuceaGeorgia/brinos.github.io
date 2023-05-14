@@ -1,11 +1,10 @@
 // Styling for the contact section
 section#contact {
-  background-color: $gray-900;
-  background-image: url("#{$contact-image}");
-  background-repeat: no-repeat;
+  background-color: $gray-200;
   background-position: center;
+
   .section-heading {
-    color: $white;
+    color: $gray-700;
   }
   .form-group {
     margin-bottom: 25px;
