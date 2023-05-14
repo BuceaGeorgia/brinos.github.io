@@ -12,7 +12,12 @@ ro: &DEFAULT_EN
     text: O șansă la terapie comportamentală timpurie pentru fiecare copil cu TSA
     button: Tell Me More
     demo: Play Demo
-    buttonlink: "#demo"
+    more_link: "#early_intervention"
+    demo_link: "#demo"
+
+
+  early_intervention:
+    title: Unul din 36 de copii e diagnosticat cu autism
 
   services:
     title: "Services"
