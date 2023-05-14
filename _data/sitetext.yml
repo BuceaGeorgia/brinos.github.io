@@ -96,14 +96,14 @@ ro: &DEFAULT_EN
         logo: assets/img/clients/creative-market.jpg
 
   team:
-    title: "OUR AMAZING TEAM"
-    text: "Lorem ipsum dolor sit amet consectetur."
-    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
+    title: "Echipă"
+    text: "This is tha team"
+    subtext: Maybe some more description here, it doesn't look that bad and I keep on writing this text to see multi-line wrapping and **markdown** support ~Exorcizamus~ te omnis imundus spiritus omnis satanica potestas omnis incursio infernalis adversarii omnis legio omnis congregatio
     section: team
     people:
-      - name: "Kay Garland"
-        role: "Lead Designer"
-        image: assets/img/team/500x500.jpg
+      - name: "Imre Mali"
+        role: "Software Engineer & PhD Student in AI"
+        image: assets/img/team/2.png
         social:
           - url: https://twitter.com
             icon: fab fa-twitter
@@ -111,9 +111,9 @@ ro: &DEFAULT_EN
             icon: fab fa-facebook-f
           - url: https://linkedin.com
             icon: fab fa-linkedin-in
-      - name: "Larry Parker"
-        role: "Lead Marketer"
-        image: assets/img/team/2.jpg
+      - name: "Georgia Bucea"
+        role: "Software Engineer & MSc Student in Physics"
+        image: assets/img/team/3.png
         social:
           - url: https://twitter.com
             icon: fab fa-twitter
@@ -121,9 +121,9 @@ ro: &DEFAULT_EN
             icon: fab fa-facebook-f
           - url: https://linkedin.com
             icon: fab fa-linkedin-in
-      - name: "Diana Perterson"
-        role: "Lead Developer"
-        image: assets/img/team/500x500.jpg
+      - name: "Iulia Oancea"
+        role: "Marketing and Sales Specialist"
+        image: assets/img/team/4.png
         social:
           - url: https://twitter.com
             icon: fab fa-twitter
@@ -133,19 +133,19 @@ ro: &DEFAULT_EN
             icon: fab fa-linkedin-in
 
   contact:
-    title: "Contact Us"
-    text: "Lorem ipsum or call 123456789"
+    title: "Contactează-ne"
+    text: "Ai o întrebare? Scrie-ne!"
     section: contact
-    name: "Name*"
-    name-validation: "Please enter your name."
+    name: "Nume*"
+    name-validation: "Introdu numele."
     email: "Email*"
-    email-validation: "Please enter your email address."
-    phone: "Phone Number"
-    phone-validation: "Please enter your phone number."
-    message: "Message*"
-    message-validation: "Please enter a message."
+    email-validation: "Introdu adresa ta de email"
+    phone: "Număr de telefon"
+    phone-validation: "Introdu numărul de telefon."
+    message: "Mesaj*"
+    message-validation: "Introdu mesajul"
     subject: "Contact Form Submission"
-    submit: "Send Message"
+    submit: "Trimite"
 
   footer:
     legal: "Privacy Policy"
