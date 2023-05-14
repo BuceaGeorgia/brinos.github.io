@@ -75,11 +75,11 @@ de: &DEFAULT_DE
 ro: &DEFAULT_EN
   nav:
     - title: "Despre"
-      section: services
+      section: main
     - title: "Tehnologie"
-      section: portfolio
+      section: technology
     - title: "Echipă"
-      section: about
+      section: team
     - title: "Noutăți"
       section: timeline
     - title: "Contact"
