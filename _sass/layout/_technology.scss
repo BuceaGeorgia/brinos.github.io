@@ -1,0 +1,34 @@
+
+.puzzle {
+  position: relative;
+  width: 45%;
+
+  .puzzle-image {
+    width: 100%;
+  }
+
+  .puzzle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 20%;
+  }
+
+  .red-text {
+    top: 48%;
+    left: 50%;
+  }
+
+  .blue-text {
+    top: 52%;
+    left: 58%;
+
+  }
+
+  .yellow-text {
+    top: 48%;
+    left: 66%;
+  }
+}
