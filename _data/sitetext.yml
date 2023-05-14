@@ -9,9 +9,10 @@
 ro: &DEFAULT_EN
   header:
     #title: Bine ai venit
-    text: BRINOS - some text here
+    text: O șansă la terapie comportamentală timpurie pentru fiecare copil cu TSA
     button: Tell Me More
-    buttonlink: "#services"
+    demo: Play Demo
+    buttonlink: "#demo"
 
   services:
     title: "Services"

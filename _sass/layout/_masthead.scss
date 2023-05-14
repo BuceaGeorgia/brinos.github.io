@@ -10,6 +10,7 @@ header.masthead {
   height: 45rem;
 
   .intro-text {
+    //float: left;
     padding-top: 12rem;
     padding-bottom: 100px;
 
@@ -28,6 +29,26 @@ header.masthead {
       margin-bottom: 25px;
       @include heading-font;
     }
+
+    .intro-button {
+      // float: left;
+      margin: 1rem;
+      margin-left: 0;
+    }
+
+    .more-button {
+      background-color: #f1a500;
+      border-color: #f1a500;
+
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: darken(#f1a500, 7.5%); // !important;
+        border-color: darken(#f1a500, 7.5%); //!important;
+        color: white;
+      }
+
+    }
   }
 }
 
@@ -37,8 +58,11 @@ header.masthead {
     background-size: 60%;
 
     .intro-text {
+      //float: left;
       //padding-top: 2rem;
       //padding-bottom: 200px;
+      text-align: left;
+      //max-width: 40rem;
       .intro-lead-in {
         font-size: 20px;
         font-style: italic;
@@ -48,13 +72,34 @@ header.masthead {
       }
 
       .intro-heading {
+        max-width: 50rem;
         display: flex;
-        font-size: 3rem;
+        font-size: 2.8rem;
         font-weight: 700;
-        line-height: 75px;
+        //line-height: 75px;
         margin-bottom: 50px;
         @include heading-font;
       }
+
+      .intro-button {
+        float: left;
+        margin: 1rem;
+        margin-left: 0;
+      }
+
+      .more-button {
+        background-color: #f1a500;
+        border-color: #f1a500;
+
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: darken(#f1a500, 7.5%); // !important;
+          border-color: darken(#f1a500, 7.5%); //!important;
+          color: white;
+        }
+      }
+
     }
   }
 }

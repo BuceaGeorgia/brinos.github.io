@@ -57,7 +57,10 @@
         <div class="intro-heading">{{ site.data.sitetext[site.locale].header.text | markdownify }}</div>
 	  {%- endif -%}
 	  {%- if site.data.sitetext[site.locale].header.button -%}
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext[site.locale].header.buttonlink }}">{{ site.data.sitetext[site.locale].header.button }}</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger intro-button more-button" href="{{ site.data.sitetext[site.locale].header.buttonlink }}">{{ site.data.sitetext[site.locale].header.button }}</a>
+	  {%- endif -%}
+      {%- if site.data.sitetext[site.locale].header.demo -%}
+        <a class="btn btn-primary btn-xl js-scroll-trigger intro-button" href="{{ site.data.sitetext[site.locale].header.buttonlink }}">{{ site.data.sitetext[site.locale].header.demo }}</a>
 	  {%- endif -%}
       </div>
     </div>
