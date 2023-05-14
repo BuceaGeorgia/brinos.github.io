@@ -103,7 +103,7 @@ ro: &DEFAULT_EN
     people:
       - name: "Imre Mali"
         role: "Software Engineer & PhD Student in AI"
-        image: assets/img/team/2.png
+        image: assets/img/team/imi.jpeg
         social:
           - url: https://twitter.com
             icon: fab fa-twitter
@@ -113,7 +113,7 @@ ro: &DEFAULT_EN
             icon: fab fa-linkedin-in
       - name: "Georgia Bucea"
         role: "Software Engineer & MSc Student in Physics"
-        image: assets/img/team/3.png
+        image: assets/img/team/georgia.jpeg
         social:
           - url: https://twitter.com
             icon: fab fa-twitter
@@ -123,7 +123,7 @@ ro: &DEFAULT_EN
             icon: fab fa-linkedin-in
       - name: "Iulia Oancea"
         role: "Marketing and Sales Specialist"
-        image: assets/img/team/4.png
+        image: assets/img/team/iulia.jpeg
         social:
           - url: https://twitter.com
             icon: fab fa-twitter
