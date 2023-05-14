@@ -1,93 +1,102 @@
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-	  <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          {%- if site.logo -%}
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            {%- if site.logo -%}
             <img height="{{ site.logo.height | default: 52 }}" src="{{ site.logo.path }}" alt="{{ site.logo.path }}"/>
-          {%- else -%}
-            {{ site.title }}
-          {%- endif -%}
-      </a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-        {% if site.locale and site.locale != "" and site.locale != nil %}
-        {% for link in site.data.navigation[site.locale].nav %}
-          <li class="nav-item">
-            {%- if link.url -%}
-              <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
-            {%- elsif link.section -%}
-              <a class="nav-link js-scroll-trigger" href="#{{ link.section }}">{{ link.title }}</a>
             {%- else -%}
-              <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+            {{ site.title }}
             {%- endif -%}
-          </li>
-        {% endfor %}
-        {% else %}
-        {% for link in site.data.navigation.nav %}
-        <li class="nav-item">
-          {%- if link.url -%}
-            <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
-          {%- elsif link.section -%}
-            <a class="nav-link js-scroll-trigger" href="#{{ link.section }}">{{ link.title }}</a>
-          {%- else -%}
-            <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
-          {%- endif -%}
-        </li>
-        {% endfor %}
-        {% endif %}
-        </ul>
-      </div>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                {% if site.locale and site.locale != "" and site.locale != nil %}
+                {% for link in site.data.navigation[site.locale].nav %}
+                <li class="nav-item">
+                    {%- if link.url -%}
+                    <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
+                    {%- elsif link.section -%}
+                    <a class="nav-link js-scroll-trigger" href="#{{ link.section }}">{{ link.title }}</a>
+                    {%- else -%}
+                    <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+                    {%- endif -%}
+                </li>
+                {% endfor %}
+                {% else %}
+                {% for link in site.data.navigation.nav %}
+                <li class="nav-item">
+                    {%- if link.url -%}
+                    <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
+                    {%- elsif link.section -%}
+                    <a class="nav-link js-scroll-trigger" href="#{{ link.section }}">{{ link.title }}</a>
+                    {%- else -%}
+                    <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+                    {%- endif -%}
+                </li>
+                {% endfor %}
+                {% endif %}
+            </ul>
+        </div>
     </div>
-  </nav>
-  <!-- End Navigation -->
+</nav>
+<!-- End Navigation -->
 
-  <!-- Header -->
-  {% if site.locale and site.locale != "" and site.locale != nil %}
-  <header class="masthead">
+<!-- Header -->
+{% if site.locale and site.locale != "" and site.locale != nil %}
+<header class="masthead">
     <div class="container">
-      <div class="intro-text">
-	  {%- if site.data.sitetext[site.locale].header.title -%}
-        <div class="intro-lead-in">{{ site.data.sitetext[site.locale].header.title | markdownify }}</div>
-	  {%- endif -%}
-	  {%- if site.data.sitetext[site.locale].header.text -%}
-        <div class="intro-heading">{{ site.data.sitetext[site.locale].header.text | markdownify }}</div>
-	  {%- endif -%}
-	  {%- if site.data.sitetext[site.locale].header.button -%}
-        <a class="btn btn-primary btn-xl js-scroll-trigger intro-button more-button" href="{{ site.data.sitetext[site.locale].header.more_link }}">{{ site.data.sitetext[site.locale].header.button }}</a>
-	  {%- endif -%}
-      {%- if site.data.sitetext[site.locale].header.demo -%}
-        <a class="btn btn-primary btn-xl js-scroll-trigger intro-button" href="{{ site.data.sitetext[site.locale].header.demo_link }}">{{ site.data.sitetext[site.locale].header.demo }}</a>
-	  {%- endif -%}
-      </div>
+        <div class="intro-text">
+            {%- if site.data.sitetext[site.locale].header.title -%}
+            <div class="intro-lead-in">{{ site.data.sitetext[site.locale].header.title | markdownify }}</div>
+            {%- endif -%}
+            {%- if site.data.sitetext[site.locale].header.text -%}
+            <div class="intro-heading">{{ site.data.sitetext[site.locale].header.text | markdownify }}</div>
+            {%- endif -%}
+            {%- if site.data.sitetext[site.locale].header.button -%}
+            <a class="btn btn-primary btn-xl js-scroll-trigger intro-button more-button"
+               href="{{ site.data.sitetext[site.locale].header.more_link }}">{{
+                site.data.sitetext[site.locale].header.button }}</a>
+            {%- endif -%}
+            {%- if site.data.sitetext[site.locale].header.demo -%}
+            <a class="btn btn-primary btn-xl js-scroll-trigger intro-button"
+               href="{{ site.data.sitetext[site.locale].header.demo_link }}">{{
+                site.data.sitetext[site.locale].header.demo }}</a>
+            {%- endif -%}
+        </div>
 
-          </div>
-    <div  style="margin-top: 5rem;font-size: 1.4rem; background-color: rgba(160, 102, 203,0.3); padding: 3rem; font-weight: 500;text-align: left;color: black;">
-                      <p class="container">BRINOS este o companie de cercetare ce iși propune să asiste fiecare părinte cu un copil neurodivergent. Un analist comportamental digital estimează progresul făcut de copil și propune un plan de intervenție personalizat.</p>
+    </div>
+    <div style="margin-top: 5rem;font-size: 1.4rem; background-color: rgba(160, 102, 203,0.3); padding: 3rem; font-weight: 500;text-align: left;color: black;">
+        <p class="container">BRINOS este o companie de cercetare ce iși propune să asiste fiecare părinte cu un copil
+            neurodivergent. Un analist comportamental digital estimează progresul făcut de copil și propune un plan de
+            intervenție personalizat.</p>
 
     </div>
 
-  </header>
-  {% else %}
-  <header class="masthead">
+</header>
+{% else %}
+<header class="masthead">
     <div class="container">
-      <div class="intro-text">
-	  {%- if site.data.sitetext.header.title -%}
-        <div class="intro-lead-in">{{ site.data.sitetext.header.title | markdownify }}</div>
-	  {%- endif -%}
-	  {%- if site.data.sitetext.header.text -%}
-        <div class="intro-heading text-uppercase">{{ site.data.sitetext.header.text | markdownify }}</div>
-	  {%- endif -%}
-	  {%- if site.data.sitetext.header.button -%}
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext.header.buttonlink }}">{{ site.data.sitetext.header.button }}</a>
-	  {%- endif -%}
-      </div>
+        <div class="intro-text">
+            {%- if site.data.sitetext.header.title -%}
+            <div class="intro-lead-in">{{ site.data.sitetext.header.title | markdownify }}</div>
+            {%- endif -%}
+            {%- if site.data.sitetext.header.text -%}
+            <div class="intro-heading text-uppercase">{{ site.data.sitetext.header.text | markdownify }}</div>
+            {%- endif -%}
+            {%- if site.data.sitetext.header.button -%}
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+               href="{{ site.data.sitetext.header.buttonlink }}">{{ site.data.sitetext.header.button }}</a>
+            {%- endif -%}
+        </div>
     </div>
-  </header>
+</header>
 
-  {% endif %}
+{% endif %}
 
-  <!-- End Header -->
+<!-- End Header -->
