@@ -1,0 +1,39 @@
+.intervention {
+  background-color: #ff6c74;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+
+  .intervention-title {
+    font-weight: 500;
+    font-size: 2.2rem;
+  }
+
+  .cite {
+  }
+}
+
+@media (min-width: 768px) {
+  .intervention {
+    background-color: #ff6c74;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+
+    .intervention-title {
+      font-weight: 500;
+      font-size: 2.8rem;
+    }
+
+    .cite {
+      align-self: end;
+      margin-right: 5rem;
+    }
+  }
+}
