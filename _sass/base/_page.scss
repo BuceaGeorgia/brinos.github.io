@@ -62,8 +62,8 @@ h6 {
 }
 
 ::selection {
-  background: $primary;
-  text-shadow: none;
+  //background: $primary;
+  //text-shadow: none;
 }
 
 img::selection {
@@ -72,4 +72,12 @@ img::selection {
 
 img::-moz-selection {
   background: transparent;
+}
+
+.interactive-image{
+  transition: transform 0.3s ease-in-out;
+}
+
+.interactive-image:hover{
+  transform: scale(1.1);
 }
