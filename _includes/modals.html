@@ -1,9 +1,8 @@
 <!-- Portfolio Modals -->
-{% for project in site.portfolio %}
 {% if site.locale and site.locale != "" and site.locale != nil %}
 <div
   class="portfolio-modal modal fade"
-  id="p{{ forloop.index }}"
+  id="contact-modal"
   tabindex="-1"
   role="dialog"
   aria-hidden="true"
@@ -89,5 +88,4 @@
   </div>
 </div>
 {% endif %}
-{% endfor %}
 <!-- End Portfolio Modals -->

@@ -75,12 +75,12 @@ de: &DEFAULT_DE
 ro: &DEFAULT_EN
   nav:
     - title: "Despre"
-      section: main
+      section: page-top
     - title: "Tehnologie"
       section: technology
+    - title: "Autism"
+      section: early_intervention
     - title: "Echipă"
       section: team
-    - title: "Noutăți"
-      section: timeline
     - title: "Contact"
       section: contact
