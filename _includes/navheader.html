@@ -64,17 +64,58 @@
                 site.data.sitetext[site.locale].header.button }}</a>
             {%- endif -%}
             {%- if site.data.sitetext[site.locale].header.demo -%}
-            <a class="btn btn-primary btn-xl js-scroll-trigger intro-button"
-               href="{{ site.data.sitetext[site.locale].header.demo_link }}">{{
+            <a
+                    data-toggle="modal" data-target="#exampleModal"
+                    class="btn btn-primary btn-xl js-scroll-trigger intro-button"
+            >{{
                 site.data.sitetext[site.locale].header.demo }}</a>
             {%- endif -%}
         </div>
-
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <form id="contactForm"
+                      action="https://formspree.io/{% if site.formspree_form_path %}{{ site.formspree_form_path }}{% else %}{{ site.email }}{% endif %}"
+                      novalidate="novalidate" method="POST">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">{{
+                                site.data.sitetext[site.locale].modal.title
+                                }}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-content">
+                            <div class="form-group">
+                                <input name="name" class="form-control" id="name" type="text"
+                                       placeholder="{{ site.data.sitetext.contact.name | default: " Name*" }}"
+                                required="required" data-validation-required-message="{{
+                                site.data.sitetext.contact.name-validation | default: "Please enter your name." }}">
+                                <p class="help-block text-danger" style="float: left"></p>
+                            </div>
+                            <div class="form-group">
+                                <input name="_replyto" class="form-control" id="email" type="email"
+                                       placeholder="{{ site.data.sitetext[site.locale].contact.email | default: "
+                                       Email*"
+                                }}"
+                                required="required" data-validation-required-message="{{
+                                site.data.sitetext[site.locale].contact.email-validation | default: "Please enter
+                                your email
+                                address." }}">
+                                <p class="help-block text-danger" style="float: left"></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="submit" class="btn btn-primary">Trimite</button>
+                        </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div style="margin-top: 5rem;font-size: 1.4rem; background-color: rgba(160, 102, 203,0.3); padding: 3rem; font-weight: 500;text-align: left;color: black;">
-        <p class="container">BRINOS este o companie de cercetare ce iși propune să asiste fiecare părinte cu un copil
-            neurodivergent. Un analist comportamental digital estimează progresul făcut de copil și propune un plan de
-            intervenție personalizat.</p>
+    </div>
+    <div class="intro-description">
+        <p class="container">{{ site.data.sitetext[site.locale].header.intro_description }}</p>
 
     </div>
 

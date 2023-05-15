@@ -7,7 +7,7 @@ header.masthead {
   background-position: right top;
   //background-size: cover;
   background-size: 80%;
-  height: 45rem;
+  height: 85rem;
 
   .intro-text {
     //float: left;
@@ -34,6 +34,14 @@ header.masthead {
       // float: left;
       margin: 1rem;
       margin-left: 0;
+      color:white;
+       &:active,
+      &:focus,
+      &:hover {
+        background-color: darken(#A066CB, 7.5%); // !important;
+        border-color: darken(#A066CB, 7.5%); //!important;
+        color: white;
+      }
     }
 
     .more-button {
@@ -49,6 +57,15 @@ header.masthead {
       }
 
     }
+  }
+
+  .intro-description {
+    margin-top: 5rem;
+    font-size: 1.4rem;
+    background-color: rgba(160, 102, 203, 0.3);
+    padding: 1rem;
+    font-weight: 500;
+    color: black;
   }
 }
 
@@ -101,5 +118,14 @@ header.masthead {
       }
 
     }
+  }
+  .intro-description {
+    margin-top: 5rem;
+    font-size: 1.4rem;
+    background-color: rgba(160, 102, 203, 0.3);
+    padding: 3rem;
+    font-weight: 500;
+    text-align: left;
+    color: black;
   }
 }
