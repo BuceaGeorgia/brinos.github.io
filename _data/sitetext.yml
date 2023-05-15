@@ -16,6 +16,9 @@ ro: &DEFAULT_EN
     more_link: "#contact"
     demo_link: "#demo"
 
+  modal:
+    title: Abonează-te
+
 
   early_intervention:
     title: Unul din 36 de copii e diagnosticat cu autism
