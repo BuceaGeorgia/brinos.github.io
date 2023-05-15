@@ -6,8 +6,13 @@
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
+            console.log('tracking event',arguments);
             dataLayer.push(arguments);
         }
+
+        const trackEvent = (eventName, params) => {
+            gtag('event', eventName, params);
+        };
 
         gtag("js", new Date());
 
