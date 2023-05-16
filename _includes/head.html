@@ -9,6 +9,10 @@
             dataLayer.push(arguments);
         }
 
+        const trackEvent = (eventName, params) => {
+            gtag('event', eventName, params);
+        };
+
         gtag("js", new Date());
 
         gtag("config", "{{ site.analytics.google }}");

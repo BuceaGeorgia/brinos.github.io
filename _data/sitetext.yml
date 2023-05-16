@@ -11,7 +11,7 @@ ro: &DEFAULT_EN
     #title: Bine ai venit
     text: O șansă la terapie comportamentală timpurie pentru fiecare copil cu TSA
     button: Contactează-ne
-    intro_description: BRINOS este o companie de cercetare ce își propune să asiste fiecare părinte cu un copil neurodivergent. Un analist comportamental digital estimează progresul făcut de copil și propune un plan de intervenție personalizat.
+    intro_description: BRINOS este o companie de cercetare care își propune să asiste fiecare părinte cu un copil neurodivergent. Un analist comportamental digital estimează progresul făcut de copil și propune un plan de intervenție personalizat.
     demo: Abonează-te
     more_link: "#contact"
     demo_link: "#demo"
@@ -95,6 +95,7 @@ en: &DEFAULT_EN
     title: Welcome to our Studio!
     text: It's Nice To Meet You
     button: Contactează-ne
+    demo: Aboneazha yourself
     buttonlink: "#services"
 
   team:

@@ -16,7 +16,7 @@
                     {% for link in site.data.sitetext[site.locale].footer.social %}
                     <li class="list-inline-item">
                         {% if link.url %}
-                        <a href="{{ link.url }}">
+                        <a href="{{ link.url }}" onclick="trackEvent('contact_social',{platform: '{{ link.url }}'})">
                             {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
                         </a>
                         {% endif %}
@@ -29,6 +29,7 @@
                 <ul class="list-inline quicklinks">
                     <li class="list-inline-item">
                         <a href="legal"
+                           onclick="trackEvent('click_legal')"
                         >{{ site.data.sitetext[site.locale].footer.legal | default:
                             "Privacy Policy" }}</a
                         >
