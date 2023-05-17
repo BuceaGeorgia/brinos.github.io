@@ -27,7 +27,7 @@ $(function () {
                 type: "POST",
                 dataType: "json",
                 // crossDomain: true,
-                headers: {  'Access-Control-Allow-Origin': '*' },
+                //headers: {  'Access-Control-Allow-Origin': '*' },
                 data: {
                     name: name,
                     phone: phone,
