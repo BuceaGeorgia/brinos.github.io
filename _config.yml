@@ -29,7 +29,7 @@ logo: #optional, defaults to site title
 locale: "ro" # See available languages in _data/sitetext.yml
 
 analytics:
-  google: G-DKKBE51K6F
+  google: G-5Q14JQZ2SG
 
 collections:
   portfolio:
