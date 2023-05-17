@@ -17,7 +17,12 @@ jobs:
 
       - run: 'bundle exec jekyll b'
         env:
-          JEKYLL_ENV: "production"
+          JEKYLL_ENV: "development"
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: "_site"
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

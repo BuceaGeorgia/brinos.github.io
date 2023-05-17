@@ -9,7 +9,8 @@ $(function () {
         submitSuccess: function ($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
-            var url = "https://formspree.io/" + "{% if site.formspree_form_path %}{{ site.formspree_form_path }}{% else %}{{ site.email }}{% endif %}";
+            //TODO for some reason this is not working from the config file
+            var url = "https://formspree.io/f/xnqyrzvo";// + "{% if site.formspree_form_path %}{{ site.formspree_form_path }}{% else %}{{ site.email }}{% endif %}";
             var name = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
@@ -25,6 +26,8 @@ $(function () {
                 url: url,
                 type: "POST",
                 dataType: "json",
+                // crossDomain: true,
+                //headers: {  'Access-Control-Allow-Origin': '*' },
                 data: {
                     name: name,
                     phone: phone,
