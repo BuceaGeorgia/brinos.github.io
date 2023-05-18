@@ -14,6 +14,7 @@
             <div class="col-sm-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle interactive-image" src="{{ person.image }}" alt=""
+                         style="object-fit: cover"
                          onmouseover="trackEvent('hover_member',{member: '{{ person.name }}'})">
                     <h4>{{ person.name }}</h4>
                     <p class="text-muted">{{ person.role }}</p>
@@ -52,7 +53,7 @@
             {% for person in site.data.sitetext.team.people %}
             <div class="col-sm-4">
                 <div class="team-member">
-                    <img class="mx-auto rounded-circle" src="{{ person.image }}" alt="">
+                    <img class="mx-auto rounded-circle" style="object-fit: cover" src="{{ person.image }}" alt="">
                     <h4>{{ person.name }}</h4>
                     <p class="text-muted">{{ person.role }}</p>
                     <ul class="list-inline social-buttons">
