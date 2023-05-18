@@ -1,22 +1,22 @@
 <div id="technology" style="margin-bottom: 16rem">
     <div class="container">
-        <h1 style="margin-bottom: 4rem">{{ site.data.sitetext[site.locale].technology.title | markdownify }}</h1>
+        <h1 style="margin-bottom: 4rem">{{ site.data.sitetext[page.locale].technology.title | markdownify }}</h1>
         <div class="tech-container">
             <div class="tech-image-container">
                 <div class="puzzle">
-                    <span class="puzzle-text red-text">{{ site.data.sitetext[site.locale].technology.detection | markdownify }}</span>
+                    <span class="puzzle-text red-text">{{ site.data.sitetext[page.locale].technology.detection | markdownify }}</span>
                     <img class="puzzle-image interactive-image" src="assets/img/technology/Subtract.png"
                          onmouseover="trackEvent('hover_technology',{technology: 'detection'})"
                     >
                 </div>
                 <div class="puzzle">
-                    <span class="puzzle-text blue-text">{{ site.data.sitetext[site.locale].technology.intervention | markdownify }}</span>
+                    <span class="puzzle-text blue-text">{{ site.data.sitetext[page.locale].technology.intervention | markdownify }}</span>
                     <img class="puzzle-image interactive-image" src="assets/img/technology/intervention.png"
                          onmouseover="trackEvent('hover_technology',{technology: 'intervention'})"
                     >
                 </div>
                 <div class="puzzle">
-                    <span class="puzzle-text yellow-text">{{ site.data.sitetext[site.locale].technology.specialists | markdownify }}</span>
+                    <span class="puzzle-text yellow-text">{{ site.data.sitetext[page.locale].technology.specialists | markdownify }}</span>
                     <img class="puzzle-image interactive-image" src="assets/img/technology/specialists.png"
                          onmouseover="trackEvent('hover_technology',{technology: 'specialists'})"
                     >
