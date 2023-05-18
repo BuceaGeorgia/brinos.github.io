@@ -22,7 +22,7 @@ en: &DEFAULT_EN
 
   early_intervention:
     title: One of every 36 children is diagnosed with ASD
-    source: TBD
+    source: Centers for Disease Control and Prevention
 
   technology:
     title: Technology
@@ -111,6 +111,7 @@ ro: &DEFAULT_EN
 
   early_intervention:
     title: Unul din 36 de copii e diagnosticat cu autism
+    source: Centrul Pentru Controlul Bolilor și al Prevenției
 
   technology:
     title: Tehnologie

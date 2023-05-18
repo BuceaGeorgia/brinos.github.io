@@ -2,7 +2,7 @@
     {%- if site.data.sitetext[page.locale].early_intervention.title -%}
     <div class="intervention">
         <p class="intervention-title">{{ site.data.sitetext[page.locale].early_intervention.title }}</p>
-        <span class="cite">Centrul Pentru Controlul Bolilor și al Prevenției</span>
+        <span class="cite">{{ site.data.sitetext[page.locale].early_intervention.source }}</span>
         {%- endif -%}
     </div>
     <img width="100%" class="intervention-image" src="assets/img/kid_scale.png"/>
