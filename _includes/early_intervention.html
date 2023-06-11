@@ -2,7 +2,7 @@
     {%- if site.data.sitetext[page.locale].early_intervention.title -%}
     <div class="intervention">
         <p class="intervention-title">{{ site.data.sitetext[page.locale].early_intervention.title }}</p>
-        <a href="https://www.cdc.gov/media/releases/2023/p0323-autism.html" target="_blank" class="cite"><span>{{ site.data.sitetext[page.locale].early_intervention.source }}</span></a>
+        <a href="https://www.cdc.gov/media/releases/2023/p0323-autism.html" target="_blank" class="cite" onclick="trackEvent('cite_click')"><span>{{ site.data.sitetext[page.locale].early_intervention.source }}</span></a>
         {%- endif -%}
     </div>
     <img width="100%" class="intervention-image" src="assets/img/kid_scale_{{ page.locale }}.png"/>

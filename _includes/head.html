@@ -33,6 +33,7 @@
 
             // Reconstruct the URL and go to the new one
             currentUrl.pathname = '/' + pathParts.join('/');
+            trackEvent('language_switch', {language: newLang});
             window.location.href = currentUrl.href;
         }
     </script>
