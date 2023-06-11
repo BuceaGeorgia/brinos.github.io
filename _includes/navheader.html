@@ -38,9 +38,9 @@
                        onclick="switchLanguage(window.location.href.includes('/en')?'ro':'en');"
                     >
                         {%- if page.locale == 'ro' -%}
-                        <img src="assets/img/en.png" height="16rem">
+                        <img src="assets/img/en.png" height="16rem" style="cursor: pointer">
                         {%- else -%}
-                        <img src="assets/img/ro.png" height="16rem">
+                        <img src="assets/img/ro.png" height="16rem" style="cursor: pointer">
                         {%- endif -%}
 
                     </a>
@@ -114,6 +114,7 @@
                                 Trimite
                             </button>
                         </div>
+                    </div>
                 </form>
             </div>
         </div>

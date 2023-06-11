@@ -13,6 +13,12 @@
   }
 
   .cite {
+    cursor: pointer;
+     z-index: 1;
+      color: black;
+    &:hover, &:active {
+        text-decoration: none;
+      }
   }
 }
 
@@ -36,7 +42,7 @@
       margin-right: 5rem;
       z-index: 1;
       color: black;
-
+        cursor: pointer;
       &:hover, &:active {
         text-decoration: none;
       }
