@@ -12,13 +12,10 @@
         "destination": "/legal.html"
       },
       {
-<<<<<<< Updated upstream
-=======
         "source": "ro",
         "destination": "/ro.html"
       },
       {
->>>>>>> Stashed changes
         "source": "**",
         "destination": "/index.html"
       }
