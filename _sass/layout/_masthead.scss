@@ -18,6 +18,10 @@ header.masthead {
       padding-bottom: 4rem;
     }
 
+    .ro{
+        padding-bottom: 4rem;
+    }
+
     .intro-lead-in {
       font-size: 2rem;
       font-style: italic;
@@ -103,7 +107,7 @@ header.masthead {
         @include heading-font;
       }
 
-      .intro-heading.en {
+      .intro-heading {
         max-width: 50%;
       }
 
