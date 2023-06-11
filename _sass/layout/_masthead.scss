@@ -14,6 +14,10 @@ header.masthead {
     padding-top: 12rem;
     padding-bottom: 100px;
 
+    .en{
+      padding-bottom: 4rem;
+    }
+
     .intro-lead-in {
       font-size: 2rem;
       font-style: italic;
@@ -34,8 +38,9 @@ header.masthead {
       // float: left;
       margin: 1rem;
       margin-left: 0;
-      color:white;
-       &:active,
+      color: white;
+
+      &:active,
       &:focus,
       &:hover {
         background-color: darken(#A066CB, 7.5%); // !important;
@@ -98,9 +103,9 @@ header.masthead {
         @include heading-font;
       }
 
-      .intro-heading.en{
-    max-width: 50%;
-  }
+      .intro-heading.en {
+        max-width: 50%;
+      }
 
       .intro-button {
         float: left;
