@@ -33,6 +33,17 @@
                     {%- endif -%}
                 </li>
                 {% endfor %}
+                <li class="nav-item">
+                    <a class="nav-link"
+                       onclick="switchLanguage(window.location.href.includes('/en')?'ro':'en');"
+                    >
+                        {%- if page.locale == 'ro' -%}
+                        <img src="assets/img/en.png" height="20">
+                        {%- else -%}
+                        <img src="assets/img/ro.png" height="20">
+                        {%- endif -%}
+
+                    </a>
             </ul>
         </div>
     </div>

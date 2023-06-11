@@ -16,6 +16,25 @@
         gtag("js", new Date());
 
         gtag("config", "{{ site.analytics.google }}");
+
+        const  switchLanguage=(newLang)=> {
+            const currentUrl = new URL(window.location.href);
+            const pathParts = currentUrl.pathname.split('/').filter(part => part !== '');
+
+            // Check if the first part of the pathname is a language code
+            if (pathParts.length > 0 && pathParts[0].length === 2) {
+                pathParts.shift(); // remove current language code
+            }
+
+            // Add new language code if it's not 'en'
+            if (newLang !== 'ro') {
+                pathParts.unshift(newLang); // add new language code
+            }
+
+            // Reconstruct the URL and go to the new one
+            currentUrl.pathname = '/' + pathParts.join('/');
+            window.location.href = currentUrl.href;
+        }
     </script>
     <!-- End Google Analytics -->
     {% endif %}
