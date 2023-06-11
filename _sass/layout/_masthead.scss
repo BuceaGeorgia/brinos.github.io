@@ -98,6 +98,10 @@ header.masthead {
         @include heading-font;
       }
 
+      .intro-heading.en{
+    max-width: 50%;
+  }
+
       .intro-button {
         float: left;
         margin: 1rem;

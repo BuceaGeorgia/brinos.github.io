@@ -34,6 +34,12 @@
     .cite {
       align-self: end;
       margin-right: 5rem;
+      z-index: 1;
+      color: black;
+
+      &:hover, &:active {
+        text-decoration: none;
+      }
     }
   }
   .intervention-image {

@@ -12,6 +12,10 @@
         "destination": "/legal.html"
       },
       {
+        "source": "en",
+        "destination": "/en.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

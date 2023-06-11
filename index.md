@@ -1,3 +1,4 @@
 ---
 layout: home
+locale: ro
 ---
