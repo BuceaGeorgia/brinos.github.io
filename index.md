@@ -1,4 +1,4 @@
 ---
 layout: home
-locale: ro
+locale: en
 ---
