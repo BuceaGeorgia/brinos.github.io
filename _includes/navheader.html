@@ -16,8 +16,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                {% if site.locale and site.locale != "" and site.locale != nil %}
-                {% for link in site.data.navigation[site.locale].nav %}
+                {% for link in site.data.navigation[page.locale].nav %}
                 <li class="nav-item">
                     {%- if link.url -%}
                     <a class="nav-link js-scroll-trigger" href="{{ link.url }}"
@@ -34,55 +33,46 @@
                     {%- endif -%}
                 </li>
                 {% endfor %}
-                {% else %}
-                {% for link in site.data.navigation.nav %}
                 <li class="nav-item">
-                    {%- if link.url -%}
-                    <a class="nav-link js-scroll-trigger" href="{{ link.url }}"
-                       onclick="trackEvent('nav_click', {section: '{{ link.url }}' })"
-                    >{{ link.title }}</a>
-                    {%- elsif link.section -%}
-                    <a class="nav-link js-scroll-trigger" href="#{{ link.section }}"
-                       onclick="trackEvent('nav_click', {section: '#{{ link.section }}' })"
-                    >{{ link.title }}</a>
-                    {%- else -%}
-                    <a class="nav-link js-scroll-trigger" href="#"
-                       onclick="trackEvent('nav_click', {section: '#' })"
-                    >{{ link.title }}</a>
-                    {%- endif -%}
-                </li>
-                {% endfor %}
-                {% endif %}
+                    <a class="nav-link"
+                       onclick="switchLanguage(window.location.href.includes('/en')?'ro':'en');"
+                    >
+                        {%- if page.locale == 'ro' -%}
+                        <img src="assets/img/en.png" height="16rem" style="cursor: pointer">
+                        {%- else -%}
+                        <img src="assets/img/ro.png" height="16rem" style="cursor: pointer">
+                        {%- endif -%}
+
+                    </a>
             </ul>
         </div>
     </div>
 </nav>
 <!-- End Navigation -->
-
-<!-- Header -->
-{% if site.locale and site.locale != "" and site.locale != nil %}
 <header class="masthead">
     <div class="container">
         <div class="intro-text">
-            {%- if site.data.sitetext[site.locale].header.title -%}
-            <div class="intro-lead-in">{{ site.data.sitetext[site.locale].header.title | markdownify }}</div>
+            {%- if site.data.sitetext[page.locale].header.title -%}
+            <div class="intro-lead-in">{{ site.data.sitetext[page.locale].header.title | markdownify }}</div>
             {%- endif -%}
-            {%- if site.data.sitetext[site.locale].header.text -%}
-            <div class="intro-heading">{{ site.data.sitetext[site.locale].header.text | markdownify }}</div>
+            {%- if site.data.sitetext[page.locale].header.text -%}
+            <div class="intro-heading {{ page.locale }}">{{ site.data.sitetext[page.locale].header.text | markdownify
+                }}
+            </div>
             {%- endif -%}
-            {%- if site.data.sitetext[site.locale].header.button -%}
+            {%- if site.data.sitetext[page.locale].header.button -%}
             <a class="btn btn-primary btn-xl js-scroll-trigger intro-button more-button"
-               onclick="trackEvent('contact', {section: '{{ site.data.sitetext[site.locale].header.more_link }}' })"
-               href="{{ site.data.sitetext[site.locale].header.more_link }}">{{
-                site.data.sitetext[site.locale].header.button }}</a>
+               onclick="trackEvent('contact', {section: '{{ site.data.sitetext[page.locale].header.more_link }}' })"
+               href="{{ site.data.sitetext[page.locale].header.more_link }}">{{
+                site.data.sitetext[page.locale].header.button }}</a>
             {%- endif -%}
-            {%- if site.data.sitetext[site.locale].header.demo -%}
+            {%- if site.data.sitetext[page.locale].header.demo -%}
             <a
                     data-toggle="modal" data-target="#exampleModal"
                     class="btn btn-primary btn-xl js-scroll-trigger intro-button"
-                    onclick="trackEvent('subscribe', {section: '{{ site.data.sitetext[site.locale].header.more_link }}' })"
+                    onclick="trackEvent('subscribe', {section: '{{ site.data.sitetext[page.locale].header.more_link }}' })"
             >{{
-                site.data.sitetext[site.locale].header.demo }}</a>
+                site.data.sitetext[page.locale].header.demo }}</a>
             {%- endif -%}
         </div>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -94,7 +84,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">{{
-                                site.data.sitetext[site.locale].modal.title
+                                site.data.sitetext[page.locale].modal.title
                                 }}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -110,9 +100,9 @@
                             </div>
                             <div class="form-group">
                                 <input name="_replyto" class="form-control" id="email" type="email"
-                                       placeholder="{{ site.data.sitetext[site.locale].contact.email | default: 'Email*'}}"
+                                       placeholder="{{ site.data.sitetext[page.locale].contact.email | default: 'Email*'}}"
                                        required="required" data-validation-required-message="{{
-                                site.data.sitetext[site.locale].contact.email-validation | default: 'Please enter
+                                site.data.sitetext[page.locale].contact.email-validation | default: 'Please enter
                                 your email
                                 address.' }}">
                                 <p class="help-block text-danger" style="float: left"></p>
@@ -124,35 +114,16 @@
                                 Trimite
                             </button>
                         </div>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
     </div>
     <div class="intro-description">
-        <p class="container">{{ site.data.sitetext[site.locale].header.intro_description }}</p>
+        <p class="container">{{ site.data.sitetext[page.locale].header.intro_description }}</p>
 
     </div>
 
 </header>
-{% else %}
-<header class="masthead">
-    <div class="container">
-        <div class="intro-text">
-            {%- if site.data.sitetext.header.title -%}
-            <div class="intro-lead-in">{{ site.data.sitetext.header.title | markdownify }}</div>
-            {%- endif -%}
-            {%- if site.data.sitetext.header.text -%}
-            <div class="intro-heading text-uppercase">{{ site.data.sitetext.header.text | markdownify }}</div>
-            {%- endif -%}
-            {%- if site.data.sitetext.header.button -%}
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-               href="{{ site.data.sitetext.header.buttonlink }}">{{ site.data.sitetext.header.button }}</a>
-            {%- endif -%}
-        </div>
-    </div>
-</header>
-
-{% endif %}
-
 <!-- End Header -->

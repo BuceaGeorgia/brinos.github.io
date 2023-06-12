@@ -11,14 +11,14 @@
 # -----------------
 en: &DEFAULT_EN
   nav:
-    - title: "Services"
-      section: services
-    - title: "Tehnologie"
-      section: portfolio
-    - title: "Echipă"
-      section: about
-    - title: "Noutăți"
-      section: timeline
+    - title: "About"
+      section: page-top
+    - title: "Technology"
+      section: technology
+    - title: "Autism"
+      section: early_intervention
+    - title: "Team"
+      section: team
     - title: "Contact"
       section: contact
 en-US:
