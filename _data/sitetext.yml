@@ -37,16 +37,6 @@ en: &DEFAULT_EN
     #subtext: Maybe some more description here, it doesn't look that bad and I keep on writing this text to see multi-line wrapping and **markdown** support ~Exorcizamus~ te omnis imundus spiritus omnis satanica potestas omnis incursio infernalis adversarii omnis legio omnis congregatio
     section: team
     people:
-      - name: "Imre Mali"
-        role: "Software Engineer & PhD Student in AI"
-        image: assets/img/team/imi.jpeg
-        social:
-          - url: https://twitter.com/imimali18
-            icon: fab fa-twitter
-          - url: https://facebook.com/imi.mali.1
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com/in/mali-imre-gergely-abb2a914a
-            icon: fab fa-linkedin-in
       - name: "Georgia Bucea"
         role: "Software Engineer & MSc Student in Physics"
         image: assets/img/team/georgia.jpeg
@@ -57,16 +47,7 @@ en: &DEFAULT_EN
             icon: fab fa-facebook-f
           - url: https://www.linkedin.com/in/bucea-georgia-946b20141
             icon: fab fa-linkedin-in
-      - name: "Iulia Oancea"
-        role: "Marketing and Sales Specialist"
-        image: assets/img/team/iulia.jpeg
-        social:
-          - url: https://twitter.com/IuliaDianaOanc1
-            icon: fab fa-twitter
-          - url: https://www.facebook.com/iuliadiana.oancea
-            icon: fab fa-facebook-f
-          - url: https://ro.linkedin.com/in/youritrecruiter-
-            icon: fab fa-linkedin-in
+
 
   contact:
     title: "Contact us"
