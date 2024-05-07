@@ -17,8 +17,6 @@ en: &DEFAULT_EN
       section: technology
     - title: "Autism"
       section: early_intervention
-    - title: "Team"
-      section: team
     - title: "Contact"
       section: contact
 en-US:
