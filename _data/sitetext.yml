@@ -79,7 +79,7 @@ en: &DEFAULT_EN
 ro: &DEFAULT_EN
   header:
     #title: Bine ai venit
-    text: Un terapeut digital în fiecare casă
+    text: Știm că terapia e crucială
     button: Contactează-ne
     intro_description: BRINOS este o companie de cercetare dedicată asistării fiecărui părinte cu un copil neurodivergent, să ofere sprijin specializat. Prin intermediul unui analist comportamental digital, se evaluează progresul copilului și se propune un plan de intervenție personalizat, ținând cont de nevoi unice.
     demo: Abonează-te
